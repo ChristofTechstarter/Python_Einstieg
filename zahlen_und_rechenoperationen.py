@@ -1,4 +1,4 @@
-# Aufgabe 2.1
+# Aufgabe 2.1, 11-12-2024
 
 a = 5
 b = 9
@@ -8,7 +8,7 @@ print("Die Subtraktion von a und b beträgt:", a - b)
 print("Die Multiplikation von a und b beträgt:", a * b)
 print("Die Division von a und b beträgt:", a / b)
 
-# Aufgabe 2.2
+# Aufgabe 2.2, 11-12-2024
 
 note1 = 3
 note2 = 4
