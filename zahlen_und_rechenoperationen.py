@@ -3,8 +3,8 @@
 a = 5
 b = 9
 
-print("Die Addition von a und b beträgt:", a + b)
-print("Die Subtraktion von a und b beträgt:", a - b)
+print(f"Die Addition von a und b beträgt: {a + b}")
+print(f"Die Subtraktion von a und b beträgt: {a - b}")
 print("Die Multiplikation von a und b beträgt:", a * b)
 print("Die Division von a und b beträgt:", a / b)
 
