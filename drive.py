@@ -1,6 +1,7 @@
-rot = False
+print("Welche Farbe zeigt die Ampel? (Rot, Gelb oder Grün)")
+farbe = input()
 
-if not rot:
-    print("Du darfst Fahren!")
+if  farbe == "Rot":
+    print("Du musst stehen bleiben!")
 else:
-    print("Du musst stehen bleiben")
+    print("Du darfst fahren!")
