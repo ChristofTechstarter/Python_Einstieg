@@ -5,7 +5,8 @@ zahl = int(input("Bitte nenne mir eine Zahl: \n"))
 
 if zahl < 0:
     print("Das ist eine negative Zahl!")
-else:
+
+if zahl > 0:
     print("Das ist eine Positive Zahl!")
 
 if zahl == 0:
