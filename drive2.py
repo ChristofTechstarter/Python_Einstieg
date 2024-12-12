@@ -6,4 +6,7 @@ def ampelsteuerung(farbe):
     else:
         print("Du darfst fahren!")
 
-ampelsteuerung("Rot")
+print("Welche Farbe zeigt die Ampel? (Rot, Gelb oder Grün)")
+farbe = input()
+
+ampelsteuerung(farbe)
