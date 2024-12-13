@@ -1,21 +1,4 @@
 # Ferien:
-# Winterferien 2024
-# 24.12.2024 - 01.01.2025
-# •4 Urlaubstage
-# • Letzter Unterrichtstag: 23.12.2024
-# • Erster Unterrichtstag nach den Ferien ist der 02.01.2025
-
-# Osterferien 2025
-# 18.04.2025 - 21.04.2025
-# • 0 Urlaubstage
-# • Letzter Unterrichtstag: 17.04.2025
-# • Erster Unterrichtstag nach den Ferien ist der 22.04.2025
-
-# Sommerferien 2025
-# 11.08.2025 - 19.08.2025
-# • 7 Urlaubstage
-# • Letzter Unterrichtstag: 08.08.2025
-# • Erster Unterrichtstag nach den Ferien ist der 20.08.2025
 
 # Winterferien 2025
 # 24.12.2025 - 01.01.2026
@@ -55,6 +38,33 @@
 # Neujahr
 # 01.01.2026
 
-feiertage = "03.10.2024" + "31.10.2024"
+feiertage = ["2024.10.03", "2024.10.31"]
+feiertage2 = feiertage
 
-print("feiertage")
+datum = input("Bitte gib ein Datum ein (JAHR.MM.TT): ")
+
+if datum >= "2024.12.24" and datum <= "2025.01.01":
+    # Winterferien 2024
+    print(
+        f"An dem {datum} hast du Winterferien, der Unterricht beginnt wieder am: 2025.01.02"
+    )
+# Osterferien 2025
+elif datum >= "2025.04.18" and datum <= "2025.04.21":
+    print(
+        f"An dem {datum} hast du Osterferien, der Unterricht beginnt wieder am: 2025.04.22"
+    )
+# Sommerferien 2025
+elif datum >= "2025.08.11" and datum <= "2025.08.19":
+    print(
+        f"An dem {datum} hast du Sommerferien, der Unterricht beginnt wieder am: 2025.08.20"
+    )
+# Winterferien 2025
+elif datum >= "2025.12.24" and datum <= "2026.01.01":
+    print(
+        f"An dem {datum} hast du Winterferien, der Unterricht beginnt wieder am: 2026.01.02"
+    )
+# Feiertage
+elif datum == feiertage:
+    print(f"An dem {datum} hast du keinen Unterricht, es ist ein Feiertag")
+else:
+    print(f"An dem {datum} hast du Unterricht!")
