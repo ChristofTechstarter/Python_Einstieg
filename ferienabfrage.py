@@ -19,8 +19,8 @@ feiertage = [
 datum = input("Bitte gib ein Datum ein (JAHR.MM.TT): ")
 
 
-def feiertag(datum):
-    if datum in feiertage:
+def feiertag(date):
+    if date in feiertage:
         print(f"An dem {datum} hast du keinen Unterricht, es ist ein Feiertag")
 
 
