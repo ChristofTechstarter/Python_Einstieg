@@ -7,4 +7,16 @@ def useralter():
     print(alter)
 
 
-useralter()
+def namekonsole():
+    name = input("Wie lautet dein Name?: ")
+    print(f"Hallo, {name}")
+
+
+def namereturn():
+    name1 = input("Wie lautet dein Name?: ")
+    return name1
+
+
+namekonsole()
+
+namereturn()
