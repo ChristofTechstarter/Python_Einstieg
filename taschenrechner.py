@@ -47,7 +47,11 @@ def sinus(x):
 
 
 def cos(x):
-    return math.cos(x)
+    return math.cos(math.radians(x))
+
+
+def tan(x):
+    return math.tan(math.radians(x))
 
 
 def calculator():
@@ -59,8 +63,9 @@ def calculator():
     print("(4) Dividieren")
     print("(5) Potenzen")
     print("(6) Sinusfunktion")
-    print("(7) Cosinusfunktion")
-    print("(8) Programm beenden")
+    print("(7) Kosinusfunktion")
+    print("(8) Tangensfunktion")
+    print("(9) Programm beenden")
 
 
 while True:
@@ -87,17 +92,19 @@ while True:
                     print(f"Fehler: Division durch Null ist nicht erlaubt!")
             elif auswahl == 5:
                 print(f"Das Ergebnis der Potenz ist: {potenz(zahl1, zahl2)}")
-        if auswahl in [6, 7]:
+        if auswahl in [6, 7, 8]:
             zahl1 = float(input("Geben Sie die eine Zahl ein: "))
             if auswahl == 6:
                 print(f"Das Ergebnis der Sinusfunktion ist: {sinus(zahl1)}")
             elif auswahl == 7:
-                print(f"Das Ergebnis der Cosinusfunktion ist: {cos(zahl1)}")
-        elif auswahl == 8:
+                print(f"Das Ergebnis der Kosinusfunktion ist: {cos(zahl1)}")
+            elif auswahl == 8:
+                print(f"Das Ergebnis der Tangensfunktion ist: {tan(zahl1)}")
+        elif auswahl == 9:
             print(f"Der Taschenrechner wird beendet. Auf Wiedersehen!")
             break
         else:
-            print(f"Ungültige Auswahl. Bitte wählen Sie eine Option zwischen 1 und 5.")
+            print(f"Ungültige Auswahl. Bitte wählen Sie eine Option zwischen 1 und 9.")
 
     except ValueError:
         print(f"Ungültige Eingabe. Bitte geben Sie eine Zahl ein.")
