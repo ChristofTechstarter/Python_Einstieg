@@ -4,7 +4,7 @@
 
 def useralter():
     alter = int(input("wie alt bist du? "))
-    print(f"Du bist {alter} Jahre alt")
+    print(alter)
 
 
 useralter()
