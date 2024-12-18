@@ -1,55 +1,68 @@
+import datetime
+
+
 feiertage = [
-    "2024.10.03",
-    "2024.10.31",
-    "2024.12.25",
-    "2024.12.26",
-    "2025.01.01",
-    "2025.04.18",
-    "2025.04.21",
-    "2025.05.01",
-    "2025.05.29",
-    "2025.06.09",
-    "2025.10.03",
-    "2025.10.31",
-    "2025.12.25",
-    "2025.12.26",
-    "2026.01.01",
+    datetime.datetime(2024, 10, 3),
+    datetime.datetime(2024, 10, 31),
+    datetime.datetime(2024, 12, 25),
+    datetime.datetime(2024, 12, 26),
+    datetime.datetime(2025, 1, 1),
+    datetime.datetime(2025, 4, 18),
+    datetime.datetime(2025, 4, 21),
+    datetime.datetime(2025, 5, 1),
+    datetime.datetime(2025, 5, 29),
+    datetime.datetime(2025, 6, 9),
+    datetime.datetime(2025, 10, 3),
+    datetime.datetime(2025, 10, 31),
+    datetime.datetime(2025, 12, 25),
+    datetime.datetime(2025, 12, 26),
+    datetime.datetime(2026, 1, 1),
 ]
 
-datum = input("Bitte gib ein Datum ein (JAHR.MM.TT): ")
+x = int(input("Gib das Jahr an: "))
+y = int(input("Gib den Monat an: "))
+z = int(input("Gib den Tag an: "))
+
+datum = datetime.datetime(x, y, z)
 
 
 def feiertag(date):
     if date in feiertage:
-        print(f"An dem {datum} hast du keinen Unterricht, es ist ein Feiertag")
+        print(f"An dem {datum.strftime("%x")} hast du keinen Unterricht, es ist ein Feiertag")
 
 
 # Winterferien 2024
-if datum >= "2024.12.24" and datum <= "2025.01.01":
+if datum >= datetime.datetime(2024, 12, 24) and datum <= datetime.datetime(2025, 1, 1):
     feiertag(datum)
     print(
-        f"An dem {datum} hast du Winterferien, der Unterricht beginnt wieder am: 2025.01.02"
+        f"An dem {datum.strftime("%x")} hast du Winterferien, der Unterricht beginnt wieder am: 2025.01.02"
     )
 # Osterferien 2025
-elif datum >= "2025.04.18" and datum <= "2025.04.21":
+elif datum >= datetime.datetime(2025, 4, 18) and datum <= datetime.datetime(
+    2025, 4, 21
+):
     feiertag(datum)
     print(
-        f"An dem {datum} hast du Osterferien, der Unterricht beginnt wieder am: 2025.04.22"
+        f"An dem {datum.strftime("%x")} hast du Osterferien, der Unterricht beginnt wieder am: 2025.04.22"
     )
 # Sommerferien 2025
-elif datum >= "2025.08.11" and datum <= "2025.08.19":
+elif datum >= datetime.datetime(2025, 8, 11) and datum <= datetime.datetime(
+    2025, 8, 19
+):
     feiertag(datum)
     print(
-        f"An dem {datum} hast du Sommerferien, der Unterricht beginnt wieder am: 2025.08.20"
+        f"An dem {datum.strftime("%x")} hast du Sommerferien, der Unterricht beginnt wieder am: 2025.08.20"
     )
 # Winterferien 2025
-elif datum >= "2025.12.24" and datum <= "2026.01.01":
+elif datum >= datetime.datetime(2025, 12, 24) and datum <= datetime.datetime(
+    2026, 1, 1
+):
     feiertag(datum)
     print(
-        f"An dem {datum} hast du Winterferien, der Unterricht beginnt wieder am: 2026.01.02"
+        f"An dem {datum.strftime("%x")} hast du Winterferien, der Unterricht beginnt wieder am: 2026.01.02"
     )
 # Feiertage
 elif datum in feiertage:
-    print(f"An dem {datum} hast du keinen Unterricht, es ist ein Feiertag")
+    print(f"An dem {datum.strftime("%x")} hast du keinen Unterricht, es ist ein Feiertag")
 else:
-    print(f"An dem {datum} hast du Unterricht!")
+    print(f"An dem {datum.strftime("%x")} hast du Unterricht!")
