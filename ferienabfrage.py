@@ -24,18 +24,19 @@ y = int(input("Gib den Monat an: "))
 z = int(input("Gib den Tag an: "))
 
 datum = datetime.datetime(x, y, z)
+datum2 = datum.strftime("%d.%m.%Y")
 
 
 def feiertag(date):
     if date in feiertage:
-        print(f"An dem {datum.strftime("%x")} hast du keinen Unterricht, es ist ein Feiertag")
+        print(f"An dem {datum2} hast du keinen Unterricht, es ist ein Feiertag")
 
 
 # Winterferien 2024
 if datum >= datetime.datetime(2024, 12, 24) and datum <= datetime.datetime(2025, 1, 1):
     feiertag(datum)
     print(
-        f"An dem {datum.strftime("%x")} hast du Winterferien, der Unterricht beginnt wieder am: 2025.01.02"
+        f"An dem {datum2} hast du Winterferien, der Unterricht beginnt wieder am: 2025.01.02"
     )
 # Osterferien 2025
 elif datum >= datetime.datetime(2025, 4, 18) and datum <= datetime.datetime(
@@ -43,7 +44,7 @@ elif datum >= datetime.datetime(2025, 4, 18) and datum <= datetime.datetime(
 ):
     feiertag(datum)
     print(
-        f"An dem {datum.strftime("%x")} hast du Osterferien, der Unterricht beginnt wieder am: 2025.04.22"
+        f"An dem {datum2} hast du Osterferien, der Unterricht beginnt wieder am: 2025.04.22"
     )
 # Sommerferien 2025
 elif datum >= datetime.datetime(2025, 8, 11) and datum <= datetime.datetime(
@@ -51,7 +52,7 @@ elif datum >= datetime.datetime(2025, 8, 11) and datum <= datetime.datetime(
 ):
     feiertag(datum)
     print(
-        f"An dem {datum.strftime("%x")} hast du Sommerferien, der Unterricht beginnt wieder am: 2025.08.20"
+        f"An dem {datum2} hast du Sommerferien, der Unterricht beginnt wieder am: 2025.08.20"
     )
 # Winterferien 2025
 elif datum >= datetime.datetime(2025, 12, 24) and datum <= datetime.datetime(
@@ -59,10 +60,10 @@ elif datum >= datetime.datetime(2025, 12, 24) and datum <= datetime.datetime(
 ):
     feiertag(datum)
     print(
-        f"An dem {datum.strftime("%x")} hast du Winterferien, der Unterricht beginnt wieder am: 2026.01.02"
+        f"An dem {datum2} hast du Winterferien, der Unterricht beginnt wieder am: 2026.01.02"
     )
 # Feiertage
 elif datum in feiertage:
-    print(f"An dem {datum.strftime("%x")} hast du keinen Unterricht, es ist ein Feiertag")
+    print(f"An dem {datum2} hast du keinen Unterricht, es ist ein Feiertag")
 else:
-    print(f"An dem {datum.strftime("%x")} hast du Unterricht!")
+    print(f"An dem {datum2} hast du Unterricht!")
