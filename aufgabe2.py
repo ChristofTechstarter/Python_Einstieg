@@ -110,54 +110,28 @@ def wochentag_berechnen():
 # ist, sollte das Programm 16:00 ausgeben.
 
 
-# Weissongs Lösung
 def zeit_in_zukunft():
     while True:
-        now = datetime.datetime.now()
-        eingabe = input(
-            "Bitte geben Sie die Zeit an (z.B. '3d' für 3 Tage, '2h' für 2 Stunden, '45m' für 45 Minuten): "
-        )
-
-        if eingabe.endswith("d"):
-            try:
-                tage = int(eingabe[:-1])
-                future_time = now + datetime.timedelta(days=tage)
-                print(f"Sie haben {tage} Tage eingegeben.")
-                print(
-                    f"Zukünftiges Datum und Zeit: {future_time.strftime('%d.%m.%Y %H:%M:%S')}"
-                )
-                return
-            except ValueError:
-                print("Ungültige Eingabe. Bitte versuchen Sie es erneut.")
-
-        elif eingabe.endswith("h"):
-            try:
-                stunden = int(eingabe[:-1])
-                future_time = now + datetime.timedelta(hours=stunden)
-                print(f"Sie haben {stunden} Stunden eingegeben.")
-                print(
-                    f"Zukünftiges Datum und Zeit: {future_time.strftime('%d.%m.%Y %H:%M:%S')}"
-                )
-                return
-            except ValueError:
-                print("Ungültige Eingabe. Bitte versuchen Sie es erneut.")
-
-        elif eingabe.endswith("m"):
-            try:
-                minuten = int(eingabe[:-1])
-                future_time = now + datetime.timedelta(minutes=minuten)
-                print(f"Sie haben {minuten} Minuten eingegeben.")
-                print(
-                    f"Zukünftiges Datum und Zeit: {future_time.strftime('%d.%m.%Y %H:%M:%S')}"
-                )
-                return
-            except ValueError:
-                print("Ungültige Eingabe. Bitte versuchen Sie es erneut.")
-
-        else:
+        try:
             print(
-                "Ungültige Eingabe. Bitte geben Sie die Zeit in der Form 'Xd', 'Yh' oder 'Zm' ein."
+                "Bitte geben Sie die Zeitspanne ein, die in die Zukunft verschoben werden soll:"
             )
+            tage = int(input("Anzahl der Tage: "))
+            stunden = int(input("Anzahl der Stunden: "))
+            minuten = int(input("Anzahl der Minuten: "))
+
+            aktuelle_zeit = datetime.datetime.now()
+
+            zeitverschiebung = datetime.timedelta(
+                days=tage, hours=stunden, minutes=minuten
+            )
+            zukunftszeit = aktuelle_zeit + zeitverschiebung
+
+            print("Aktuelle Zeit:", aktuelle_zeit.strftime("%d-%m-%dY %H:%M:%S"))
+            print("Zukünftige Zeit:", zukunftszeit.strftime("%d-%m-%Y %H:%M:%S"))
+            break
+        except ValueError:
+            print("Ungültige Eingabe! Bitte gib eine Zahl ein!")
 
 
-# zeit_in_zukunft()
+zeit_in_zukunft()
