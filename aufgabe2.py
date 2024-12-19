@@ -158,3 +158,6 @@ def zeit_in_zukunft():
             print(
                 "Ungültige Eingabe. Bitte geben Sie die Zeit in der Form 'Xd', 'Yh' oder 'Zm' ein."
             )
+
+
+# zeit_in_zukunft()
