@@ -19,9 +19,9 @@ else:
 - Schreibe die Arbeitsschritte auf.
 
 ### Anwort:
-- Zeile 12: die Variable `zahl` fordert einen user Input mit `input()` an, um Mathematische Operationen durchzuführen wird das `String` Ergebnis des Sser Inputs mithilfe von `int()` in eine Zahl konvertiert.
+- Zeile 12: die Variable `zahl` fordert einen user Input mit `input()` an, um Mathematische Operationen durchzuführen wird das `String` Ergebnis des User Inputs mithilfe von `int()` in eine Zahl konvertiert.
 - Zeile 13: Eine `if` Bedingung die überprüft ob meine Variable `zahl` größer als 10 ist
-- Zeile 14: was passieren soll wenn die Bedingung in zeile 13 `True` ist, in diesem Fall ein `print()` Befehl, der in `Stringform` "Die Zahl ist größer als 10." auf der Konsole ausgegeben wird
+- Zeile 14: was passieren soll wenn die Bedingung in zeile 13 `True` ist, in diesem Fall ein `print()` Befehl, der als `String` "Die Zahl ist größer als 10." auf der Konsole ausgegeben wird
 - Zeile 15: `else` bezieht sich auf das `if` von Zeile 13 und erläutert was passieren soll wenn `if` von Zeile 13 `False` ist
 - Zeile 16: mit dem `print()` Befehl, wird der `String` "Die Zahl ist 10 oder kleiner." in der Konsole ausgegeben
 
